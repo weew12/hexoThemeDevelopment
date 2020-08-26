@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <%#   这里是 layout.ejs%> 
+   
+ 
+    <%- include("index.ejs") %>
+<% /* %> 
+    <%- include("post.ejs") %>
+
+    <!-- 一般在写逻辑的时候会用到这个标签，这个标签不会输出到页面上 -->
+    <%#  %>
+
+    <!-- 这个标签会输出到页面上，是带着非转义符号的 -->
+    <%# 
+        var test = "基本上，就用这两组标签，其他的也用不上。";
+    %>
+
+    <%#- test %>
+
+    <br />
+
+    <% site.posts.forEach(function(post){ %>
+        <%- post.title %>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <% var nowTime = date(post.date, 'YYYY/M/D'); %> 
+        <%- nowTime %>
+        <a href="/<%- post.path %>"><%- post.title %></a>
+        <br>
+    <% }); %>
+  <% */ %> 
+
+</body>
+</html>

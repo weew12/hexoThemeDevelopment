@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test index</title>
+    <!-- <link rel="stylesheet" href="./test.css"> -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <%- css('css/main.css') %> 
+</head>
+<body>
+    <div id="main">
+        <div id="aside-left">
+            <img src="http://hexo.weew12.top/medias/logo.png" alt="">
+            <ul id="sidenav">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">关于</a></li>
+                <li><a href="#">留言</a></li>
+                <li><a href="#">友链</a></li>
+                <li><a href="#">笔记</a></li>
+            </ul>
+            <ul id="linktag">
+                <a href="#"><i class="fa fa-qq fa-2x" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-weixin fa-2x" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-weibo fa-2x" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a>
+            </ul>
+        </div>
+        <%- include("post.ejs") %> 
+        <div id="content">
+            <% site.posts.forEach(post => { %>
+                <%- post.title %>
+                <%- post.date %>  
+                <%- post.content %> 
+            <% }) %>
+        </div>
+        <div id="aside-right">ccc</div>
+    </div>
+</body>
+</html>
